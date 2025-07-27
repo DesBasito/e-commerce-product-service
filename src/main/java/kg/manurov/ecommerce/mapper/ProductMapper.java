@@ -1,6 +1,7 @@
 package kg.manurov.ecommerce.mapper;
 
 import jakarta.validation.constraints.NotNull;
+import kg.manurov.ecommerce.dto.CategoryDto;
 import kg.manurov.ecommerce.dto.ProductPurchaseResponse;
 import kg.manurov.ecommerce.dto.ProductRequest;
 import kg.manurov.ecommerce.dto.ProductResponse;
@@ -30,7 +31,9 @@ public class ProductMapper {
                 product.getDescription(),
                 product.getAvailableQuantity(),
                 product.getPrice(),
-                product.getCategory()
+                new CategoryDto(product.getCategory().getId(),
+                        product.getCategory().getName(),
+                        product.getCategory().getDescription())
         );
     }
 

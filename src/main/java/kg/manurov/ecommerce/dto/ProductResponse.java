@@ -1,7 +1,5 @@
 package kg.manurov.ecommerce.dto;
 
-import kg.manurov.ecommerce.entity.Category;
-
 import java.math.BigDecimal;
 
 public record ProductResponse(
@@ -10,5 +8,5 @@ public record ProductResponse(
         String description,
         double availableQuantity,
         BigDecimal price,
-        Category category
+        CategoryDto category
 ){}
